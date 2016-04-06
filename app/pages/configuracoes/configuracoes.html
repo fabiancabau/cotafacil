@@ -1,0 +1,53 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Configurações
+  </ion-title>
+</ion-navbar>
+
+<ion-content padding class="page2">
+	
+	<ion-list no-lines>
+		<ion-item>
+		 <ion-toggle blue checked="true"></ion-toggle>
+		 <ion-label>
+		 Notificações
+		 </ion-label>
+		 <ion-icon item-left name="notifications"></ion-icon>
+		</ion-item>
+	</ion-list>
+
+	<ion-list radio-group>
+
+	  <ion-list-header>
+        Frequência
+  	  </ion-list-header>
+
+	  <ion-item>
+	    <ion-label>Hora em Hora</ion-label>
+	    <ion-radio (click)="setFrequency('hourly')" value="hourly"></ion-radio>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label>Abertura</ion-label>
+	    <ion-radio (click)="setFrequency('opening')" value="opening"></ion-radio>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label>Fechamento</ion-label>
+	    <ion-radio (click)="setFrequency('closing')" value="closing"></ion-radio>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label>Abertura e Fechamento</ion-label>
+	    <ion-radio (click)="setFrequency('both')" value="both"></ion-radio>
+	  </ion-item>
+
+	</ion-list>
+
+	<button inset block secondary (click)="save()">
+	  	Salvar
+	</button>
+
+
+</ion-content>
